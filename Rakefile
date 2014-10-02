@@ -1,4 +1,4 @@
-desc "Ejecutar la aplicación"
+desc "Ejecutar la aplicacion"
 task :default do
   sh "ruby twitter.rb"
 end
