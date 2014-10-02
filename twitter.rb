@@ -2,7 +2,16 @@
 require 'twitter'
 require 'sinatra'
 
-require './configure'
+class PopularUser
+  require './configure'
+  def usuario(client, name)
+    return client.user? name
+  end
+  
+  def amigos(client, name)
+    return client.friends(name).friends_count
+  end
+end
 
 get '/' do
   @seguidores = []
@@ -17,6 +26,7 @@ post '/' do
   @name = params[:firstname] || ''
   @number = params[:n].to_i
   @number = 10 if @number > 10
+  @seguidores = PopularUser.new
   if client.user? @name 
     amigos = client.friends(@name,{})
     amigos = amigos.map { |i| [i.name, i.followers_count]}
@@ -25,3 +35,5 @@ post '/' do
   end      
   erb :twitter
 end
+
+
