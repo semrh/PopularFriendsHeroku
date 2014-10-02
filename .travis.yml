@@ -1,9 +1,2 @@
 language: ruby
-rvm:
-  - 1.9.3
-  - jruby-18mode
-  - jruby-19mode
-  - rbx-2
-  - ruby-head
-  - jruby-head
-  - ree
+rvm: 1.9.3
