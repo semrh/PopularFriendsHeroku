@@ -21,3 +21,9 @@ Podemos ejecutarlo de dos formas:
 
 1. `ruby twitter.rb`
 2. Iremos a [http://localhost:4567/](http://localhost:9393/) para poder usar la aplicación
+
+
+## Ejecución en Heroku
+------------
+
+Podemos ejecutar también la aplicación desde la web por medio de [Heroku](heroku.com), en la página: [http://powerful-retreat-8383.herokuapp.com/](http://powerful-retreat-8383.herokuapp.com/).
