@@ -1,2 +1,2 @@
-require './number_cruncher'
+require './twitter.rb'
 run Sinatra::Application
